@@ -1,0 +1,105 @@
+:root {
+    --pink: #f14e95;
+    --bg: #0a0a0a;
+    --shadow : 0 2px 2px rgb(0 0 0 / 0,5);
+}
+
+body {
+    font-size: 1.2rem;
+    min-height: 2000px;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(rose\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%px;
+    z-index: -1;
+
+}
+.hero h4, .hero h1, .hero p {
+    text-align: var(--shadow);
+}
+
+.hero {
+
+    min-height: 100vh;
+}
+
+.hero h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 6rem;
+}
+
+.hero h4 {
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1.6rem;
+}
+
+.hero a {
+    color: var(--pink);
+    background-color: white;
+}
+
+.hero a:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+
+.countdown{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.day, 
+.hour,
+.minute,
+.second {
+    font-size: 3rem;
+}
+
+.waiting {
+    height: 50vh;
+}
+
+/* laptop */
+@media (max-width: 992px) {
+html {
+    font-size: 75%;
+}
+.countdown {
+    padding: 70px;
+    margin: 10px;
+}
+}
+
+/* tablet */
+@media (max-width: 720px) {
+    html  {
+        font-size: 65%;
+    }
+    .countdown {
+        padding: 76px;
+        margin: 5px;
+    }
+}
+/* mobile phone */
+@media (max-width: 480px) {
+    html{
+        font-size: 60%;
+    }
+    .countdown {
+        padding: 45px;
+        margin: 3px;
+    }
+}
